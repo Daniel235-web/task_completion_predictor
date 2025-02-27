@@ -1,0 +1,39 @@
+# .gitignore for Task Completion Predictor
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+*.egg
+venv/
+env/
+venv*/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data & Models
+*.joblib        # Exclude saved models/scalers
+/scaler.joblib  # Optional: Explicitly ignore scaler
+/model.joblib   # Optional: Explicitly ignore model
+*.csv           # Exclude local datasets (keep sample_data.csv if needed)
+!sample_data.csv # Preserve sample dataset (remove if not needed)
+
+# Logs & Outputs
+*.log
+*.png           # Exclude generated plots (e.g., confusion_matrix.png)
+/outputs/       # Exclude output directories
+
+# Testing
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
