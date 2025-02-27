@@ -66,8 +66,7 @@ def streamlit_interface():
         age = st.number_input("Age", min_value=18, max_value=100, value=30)
         time_spent = st.number_input("Time spent (hours)", min_value=0.0, value=4.5)
         tasks = st.number_input("Tasks completed", min_value=0, value=5)
-        wellness = st.number_input("Wellness score (1-10)", min_value=1.0, 
-                                 max_value=10.0, value=7.5)
+        wellness = st.number_input("Wellness score (1-10)", min_value=1.0, max_value=10.0, value=7.5)
         
         if st.form_submit_button("Predict"):
             proba = predict_probability([age, time_spent, tasks, wellness])
